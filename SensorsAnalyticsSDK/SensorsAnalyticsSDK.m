@@ -1270,7 +1270,7 @@ static SensorsAnalyticsSDK *sharedInstance = nil;
             //为了保证事件时长准确性，当前开机时间需要在 serialQueue 队列外获取，再在此处传入方法内进行计算
             NSNumber *eventDuration = [self.trackTimer eventDurationFromEventId:event currentSysUpTime:currentSystemUpTime];
             if (eventDuration) {
-                eventPropertiesDic[@"event_duration"] = eventDuration;
+                eventPropertiesDic[@"takeup_time"] = eventDuration;
             }
         }
 
