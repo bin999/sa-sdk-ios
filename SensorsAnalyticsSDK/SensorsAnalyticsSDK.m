@@ -1271,6 +1271,7 @@ static SensorsAnalyticsSDK *sharedInstance = nil;
             NSNumber *eventDuration = [self.trackTimer eventDurationFromEventId:event currentSysUpTime:currentSystemUpTime];
             if (eventDuration) {
                 eventPropertiesDic[@"takeup_time"] = eventDuration;
+                eventPropertiesDic[@"event_duration"] = eventDuration;
             }
         }
 
